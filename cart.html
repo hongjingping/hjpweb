@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <title>洪静萍cart-</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+<!--整体结构-->
+        <!--1.顶部通栏-->
+    <header class="jd_topBar">
+        <a href="#" class="icon_back"></a>
+        <h3>购物车</h3>
+        <a href="#" class="icon_menu"></a>
+    </header>
+<!--主体内容-->
+        <!--2.安全提示:-->
+    <div class="jd_safeTip">
+        <!--先引入一个fadeInDown定义了animation动画序列 在写一个animated（定义了动画时间）才可以动起来-->
+        <p class="fadeInDown animated">
+            您正在安全购物环境中，请放心购物
+        </p>
+    </div>
+        <!--3.店铺-->
+    <div class="jd_shop">
+            <!--3.1店铺头部-->
+        <div class="jd_shop_tit">
+            <!--3.3自定义复选框-->
+            <div class="check_box">
+                <!--真正的自定义盒子-->
+                <a href="javascript:;" class="jd_check_box"></a>
+            </div>
+            <div class="shop_info">
+                <!--分为左右两个盒子，左浮动和右浮动-->
+                <div class="f_left">
+                    <!--logo用image-->
+                    <img class="logo" src="images/buy-logo.png" alt=""/>
+                    <span class="name">京东自营</span>
+                </div>
+                <div class="f_right tip m_r10">
+                    您享受满79元免运费服务
+                </div>
+            </div>
+        </div>
+            <!--3.2店铺内容:左中右-->
+        <div class="jd_shop_con">
+            <!--只要写出一个，就可以将下面的拷贝就好了-->
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <!--左右的两个盒子可以直接用上面的check_box和check_info，因为是一样的，左边的固定，右边的自适应-->
+                <div class="check_box">
+                    <!--左边的复选框-->
+                    <a href="javascript:;" class="jd_check_box" checked></a>
+                </div>
+                <div class="shop_info clearfix">
+                    <!--右边有图片和信息-->
+                    <a class="img_box" href="javascript:;"><img src="images/detail01.jpg" alt=""/></a>
+                    <div class="info_box">
+                        <a class="p_name" href="#">华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机</a>
+                        <p class="p_price">$1000</p>
+                        <div class="p_option">
+                            <div class="change_num">
+                                <span>-</span>
+                                <input type="tel"/><!--tel能够调用纯数字-->
+                                <span>+</span>
+                            </div>
+                            <div class="delete_box">
+                                <!--因为删除购物车的盖子可以翻开，由2部分组成-->
+                                <span class="delete_up"></span>
+                                <span class="delete_down"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--弹出框：弹出层、弹出框-->
+    <div class="jd_window">
+        <!--自己定义一个myBounceInDown-->
+        <div class="jd_window_box">
+            <div class="jd_window_title">你确定删除此商品吗？</div>
+            <div class="jd_btn clearfix">
+                <a class="cancel" href="#">删除</a>
+                <a class="submit" href="#">确认</a>
+            </div>
+        </div>
+
+    </div>
+
+<script src="js/common.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+@charset "utf-8";
+body{
+    background: #f5f5f5;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei','sans-serif';
+    color:  #333;
+    min-width: 300px;
+}
+/*===================================信息模块*/
+.jd_topBar{
+    position: static;/*定位默认值,静态的，因为在base中设置了定位，不占位置，此时要将他还原，否则下面的安全提示内容会跑上来*/
+}
+.jd_safeTip{
+    text-align: center;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    line-height: 34px;
+    background-color: white;
+    color: #666;
+    font-size: 12px;
+}
+.jd_safeTip p{
+    position: relative;
+    display: inline-block;/*p默认占一行，为了让其内容合在一起*/
+    padding-left: 23px;/*让图标与文字有分开点*/
+}
+.jd_safeTip p::before{
+    content: '';
+    position: absolute;
+    top:7px;/*让图标下来点*/
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+    background: url('../images/safe_icon.png');
+    -webkit-background-size: 18px 18px;/*原图是36px，我们要进行压缩处理*/
+    background-size: 18px 18px;
+}
+
+/*===========================店铺===============*/
+.jd_shop{
+    background-color: #fff;
+    margin-top: 10px;
+}
+.jd_shop .jd_shop_tit{
+    min-height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+.jd_shop .jd_shop_con>.product {
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+    position:relative;
+}
+/*店铺头部的盒子分为左右，左边为复选框，右边自适应*/
+.jd_shop .check_box{
+    width: 40px;
+    position: absolute;
+    width: 40px;
+    /*height: 34px;因为外层容器直接设置了高度*/
+    border-radius: 50%;
+    height: 100%;/*自适应*/
+}
+.jd_shop .shop_info{
+    padding-left: 40px;
+    /*height: 34px;因为外层容器直接设置了高度*/
+    height: 100%;
+}
+.jd_shop .shop_info .logo{
+    width: 15px;
+    height: 13px;
+   /* display: inline-block;*/
+}
+.jd_shop .shop_info .tip{
+    font-size: 12px;
+    color: #d8505c;
+}
+
+.jd_shop .shop_info .img_box{
+    height: 100px;
+    width: 90px;
+    float: left;
+    padding: 10px;
+    padding-left: 0px;
+}
+.jd_shop .shop_info .img_box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.jd_shop .shop_info .info_box{
+    overflow: hidden;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.jd_shop .shop_info .info_box .p_name{
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    line-height: 15px;/*只显示两行*/
+}
+.jd_shop .shop_info .info_box .p_price{
+    color: #d8505c;
+    font-size: 12px;
+    padding: 3px 0;
+}
+.jd_shop .shop_info .info_box .p_option{}
+/*数量选择盒子*/
+.change_num{
+    float: left;
+}
+.change_num span{
+    border: 1px solid #ccc;
+    height: 24px;
+    width: 36px;
+    float: left;
+    line-height: 24px;
+    text-align: center;
+}
+.change_num span:first-child{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+ }
+.change_num span:last-child{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+/*.change_num span:nth-of-type(2){
+    color:red;
+}*/
+.change_num input{
+    border-bottom: 1px solid #ccc;
+    border-top:  1px solid #ccc;
+    height: 24px;
+    width: 36px;
+    float: left;
+}
+    /*删除盒子*/
+.delete_box{
+    float: right;
+}
+.delete_box .delete_up{
+    width: 20px;
+    height: 5px;
+    display: block;
+    background-image: url('../images/delete_up.png');
+    -webkit-background-size: 20px 5px;
+    background-size: 20px 5px;
+    margin-left: -1px;
+}
+.delete_box .delete_down{
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-image: url('../images/delete_down.png');
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    margin-top: -2px;
+}
+/*1.自定义复选框==================下面也会用到的样式*/
+.jd_check_box{
+    width: 40px;
+    height: 34px;
+    padding: 7px 10px;/*我们的内容第20px 20px*/
+    display: block;
+
+    background: url('../images/shop-icon.png');
+    -webkit-background-size: 50px 100px;/*图片是100x*200px*/
+    background-size: 50px 100px;
+    background-position: 0 0;
+    /*将复选框圆圈放到中间的内容区域*/
+    background-clip:content-box;
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+}
+.jd_check_box[checked]{
+    background-position: -25px 0;
+}
+
+/*弹出层*/
+.jd_window{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+    /*让盒子隐藏*/
+    display: none;
+}
+.jd_window .jd_window_box{
+    width: 80%;
+   /* margin:0 auto;*/
+    background-color: #fff;
+    border-radius: 4px;
+    padding:0 10px;
+    /*当不知道盒子的宽度的时候，让弹出层在页面中居中显示，通过transform来做,前提需要定位*/
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.jd_window .jd_window_box .jd_window_title{
+    line-height: 75px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.jd_window .jd_window_box .jd_btn{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.jd_window .jd_window_box .jd_btn a{
+    width: 45%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    float: left;
+    border-radius: 4px;
+}
+.jd_window .jd_window_box .jd_btn .cancel{
+    border:1px solid #ccc;
+    margin-right: 10%;
+}
+.jd_window .jd_window_box .jd_btn .submit{
+    background: #d8505c;
+    color: white;
+}
+/*弹窗动画*/
+@keyframes myBounceInDown {
+    0%{
+        opacity:0;
+        /*第一步要移动到很远的地方去*/
+        -webkit-transform: translate3d(-50%,-500%,0);
+        transform: translate3d(-50%,-500%,0);
+    }
+    60%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-45%,0);
+        transform: translate3d(-50%,-45%,0);
+    }
+    75%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-53%,0);
+        transform: translate3d(-50%,-53%,0);
+    }
+    90%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-48%,0);
+        transform: translate3d(-50%,-48%,0);
+    }
+    100%{
+        opacity:1;
+        /*回到起点*/
+        -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+    }
+}
+/*2.定义动画*/
+.myBounceInDown{
+    -webkit-animation: myBounceInDown 1s;
+    animation: myBounceInDown 1s;
+}
+/*1.定义动画序列*/
+@-webkit-keyframes myBounceInDown {
+    0%{
+        opacity:0;
+        /*第一步要移动到很远的地方去*/
+        -webkit-transform: translate3d(-50%,-500%,0);
+        transform: translate3d(-50%,-500%,0);
+    }
+    60%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-45%,0);
+        transform: translate3d(-50%,-45%,0);
+    }
+    75%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-53%,0);
+        transform: translate3d(-50%,-53%,0);
+    }
+    90%{
+        opacity:1;
+        -webkit-transform: translate3d(-50%,-48%,0);
+        transform: translate3d(-50%,-48%,0);
+    }
+    100%{
+        opacity:1;
+        /*回到起点*/
+        -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+    }
+}

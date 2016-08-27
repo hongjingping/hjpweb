@@ -1,0 +1,299 @@
+/*body*/
+body{
+    background-color: #f5f5f5;
+}
+/*整体盒子的布局*/
+.jd_layout{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+/*头部：logo是定位，登录是右浮动，中间的搜索框的图标也是由定位的*/
+/*头部外面的盒子*/
+.jd_header{
+    width: 100%;
+    height: 40px;
+    top:0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+}
+/*头部的盒子*/
+.jd_header_box{
+    width: 100%;
+    max-width: 640px;
+    min-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    height: 40px;
+    /*默认是透明的*/
+    background-color: rgba(201,21,35,0);
+}
+/*logo*/
+.jd_header .icon_logo{
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 60px;
+    height: 36px;
+    /*精灵图放到公共样式中去*/
+    background-position: 0 -103px;
+}
+
+/*登录*/
+.jd_header .login{
+    position:absolute;
+    right:0;
+    top:0;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+/*搜索框*/
+.jd_header form{
+    width: 100%;
+    height: 40px;
+    padding-left: 65px;
+    padding-right: 50px;
+    position: relative;
+}
+/*搜索框*/
+.jd_header input{
+    width: 100%;
+    height: 30px;
+    margin-top:4px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding-left: 25px;
+}
+/*搜索图标*/
+.jd_header form .icon_search{
+    position: absolute;
+    left: 70px;
+    top:10px;
+    width: 20px;
+    height: 20px;
+    background-position: -60px -109px;
+}
+/*=================================轮播图*/
+.jd_banner{
+    width: 100%;
+    /*min-width: 300px;
+    max-width: 640px;*/
+    overflow: hidden;
+    position: relative;
+}
+.jd_banner ul:first-child{
+    width: 1000%;
+    /*向x轴移动10%*/
+    /*margin-left: -100%;*/
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+}
+.jd_banner ul:first-child li{
+    float: left;
+    width: 10%;
+}
+.jd_banner ul:first-child li a{
+    width: 100%;
+    display: block;
+}
+.jd_banner ul:first-child li a img{
+    width: 100%;
+    display: block;
+}
+/*轮播图的点*/
+.jd_banner ul:last-child{
+    position: absolute;
+    left: 50%;
+    margin-left: -59px;
+    bottom: 6px;
+    width: 118px;
+    height: 6px;
+}
+.jd_banner ul:last-child li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border:1px solid #ffffff;
+    margin-left: 10px;
+}
+.jd_banner ul:last-child li.now{
+    background-color: #fff;
+}
+.jd_banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+/*===================================nav*/
+.jd_nav{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.jd_nav ul{
+    width: 100%;
+    padding: 15px 0;
+    overflow: hidden;
+}
+.jd_nav ul li{
+    float: left;
+    width: 25%;
+
+}
+.jd_nav ul li a{
+    width: 100%;
+    display: block;
+}
+.jd_nav ul li a img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
+.jd_nav ul li a p{
+   text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    color: #666;
+}
+/*详细商品*/
+.jd_product{
+    padding: 0 5px;
+    height: 400px;;
+}
+.jd_product_item{
+    background-color: #fff;
+    box-shadow: 0 0 1px #ccc;
+    margin-top: 10px;
+}
+
+.jd_product_item .jd_product_tit {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jd_product_item .jd_product_tit.noborder{
+    border-bottom: none;
+}
+.jd_product .jd_product_tit h3{
+    font-weight: normal;
+    font-size: 15px;
+    color:#666;
+    margin-left: 10px;
+    padding-left: 8px;
+    position: relative;
+}
+.jd_product .jd_product_tit h3::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    left: 0;
+    top:11px;
+    background-color: #d8505c;
+}
+
+/*掌上秒杀*/
+.secKill_box .sk_name{
+    position: relative;
+    color: #d8505c;
+    margin-left: 10px;
+    padding-left: 25px;
+    font-size: 15px;
+    float: left;
+}
+.secKill_box .sk_name::before{
+    content: '';
+    position: absolute;
+    left:0;
+    top:7px;
+    width: 16px;
+    height: 20px;
+    background: url('../images/seckill-icon.png') no-repeat;
+    -webkit-background-size: 16px 20px;
+    background-size: 16px 20px;
+}
+.secKill_box .sk_time {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.secKill_box .sk_time span{
+    float: left;
+    background-color: #333;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    margin-left: 3px;
+    color:#fff;
+}
+.secKill_box .sk_time span:nth-child(3n){
+    background-color: #fff;
+    color: #333333;
+    width: 3px;
+}
+/*秒杀商品*/
+.product_con{
+    width: 100%;
+    overflow: hidden;
+}
+.secKill_box .sk_product{
+    width: 100%;
+    padding: 10px 0;
+}
+.product_con .sk_product li{
+    width: 33.333%;
+    float: left;
+}
+.product_con .sk_product li a {
+    width: 100%;
+    display: block;
+    padding: 0 18px;
+    border-right: 1px solid #e0e0e0;
+}
+.product_con .sk_product li:last-child a{
+    border-right: none;
+}
+.product_con .sk_product li a img{
+    width: 100%;
+    display: block;
+}
+.product_con .sk_product li a p {
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 0;
+}
+.product_con .sk_product li a .now_price{
+    color:#d8505c;
+}
+.product_con .sk_product li a .old_price{
+    text-decoration: line-through;
+    color: #666;
+}
+/*产品盒子组合模式*/
+a.w_50{
+    width: 50%;
+}
+a.w_50 img{
+    width: 100%;
+    display: block;
+}
+.b_left{
+    border-left: 1px solid #e0e0e0;
+}
+.b_right{
+    border-right: 1px solid #e0e0e0;
+}
+.b_top{
+    border-top: 1px solid #e0e0e0;
+}
+.b_bottom{
+    border-bottom: 1px solid #e0e0e0;
+}

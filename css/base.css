@@ -1,0 +1,126 @@
+/*reset css重置*/
+body{
+    font:14px/14px "microsoft YaHei",'sans-serif';
+    color:#333;
+}
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    /*设置所有的盒子从边框开始计算宽度*/
+    -webkit-box-sizing:border-box;
+    box-sizing: border-box;
+    /*清楚移动端默认的高亮点击效果*/
+    -webkit-tap-highlight-color: transparent;
+
+}
+ul,ol{
+    list-style: none;
+}
+textarea,input{
+    outline: none;
+    border: none;
+    resize: none;
+    /*清楚移动端默认的输入框样式*/
+    -webkit-appearance: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    color: #333;
+}
+/*common css*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.m_t10{
+    margin-top: 10px;
+}
+.m_b10{
+    margin-bottom: 10px;
+}
+.m_l10{
+    margin-left: 10px;
+}
+.m_r10{
+    margin-right: 10px;
+}
+/*精灵图,以icon_开头或者以空格开头，后面带有icon_*/
+[class^='icon_'],[class^=' icon_']{
+    background-image: url('../images/sprites.png');
+    /*流式布局对图片进行缩小，分辨率更高*/
+    -webkit-background-size: 200px 200px;
+    background-size: 200px 200px;
+}
+/*顶部通栏*/
+.jd_topBar{
+    height: 44px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    background: url("../images/header-bg.png");
+    -webkit-background-size: 1px 44px;
+    background-size: 1px 44px;
+}
+.jd_topBar .icon_back,
+.jd_topBar .icon_menu{
+    position: absolute;
+    width: 40px;
+    height: 44px;
+    top: 0;
+    padding: 12px 10px;
+    /*从边框开始算盒子*/
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+.jd_topBar .icon_back{
+    left: 0;
+    background-position:-20px 0 ;
+}
+.jd_topBar .icon_menu{
+    right: 0;
+    background-position:-60px 0 ;
+}
+/*所搜框的自适应*/
+.jd_topBar form{
+    width: 100%;
+    height: 44px;
+    padding: 0 40px;
+}
+.jd_topBar h3{
+    font-weight: normal;
+    text-align: center;
+    line-height: 44px;
+}
+.jd_topBar form input{
+    width: 100%;
+    height: 30px;
+    border:1px solid #333;
+    border-radius: 4px;
+    margin-top: 7px;
+    padding: 0 10px;
+}
+/*购车页面H3*/
+.jd_topBar{
+    font-weight: normal;
+    text-align: center;
+    height:44px;
+    line-height: 44px;
+    font-size: 16px;
+}

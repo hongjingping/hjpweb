@@ -1,0 +1,131 @@
+body,html{
+    height: 100%;
+}
+body{
+    min-width: 300px;
+    position: relative;
+}
+/*顶部通栏*/
+/*.jd_topBar{
+    height: 44px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    background: url("../images/header-bg.png");
+    -webkit-background-size: 1px 44px;
+    background-size: 1px 44px;
+}
+.jd_topBar .icon_back,
+.jd_topBar .icon_menu{
+    position: absolute;
+    width: 40px;
+    height: 44px;
+    top: 0;
+    padding: 12px 10px;
+    /!*从边框开始算盒子*!/
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+.jd_topBar .icon_back{
+    left: 0;
+    background-position:-20px 0 ;
+}
+.jd_topBar .icon_menu{
+    right: 0;
+    background-position:-60px 0 ;
+}
+/!*所搜框的自适应*!/
+.jd_topBar form{
+    width: 100%;
+    height: 44px;
+    padding: 0 40px;
+}
+.jd_topBar h3{
+    font-weight: normal;
+    text-align: center;
+    line-height: 44px;
+}
+.jd_topBar form input{
+    width: 100%;
+    height: 30px;
+    border:1px solid #333;
+    border-radius: 4px;
+    margin-top: 7px;
+    padding: 0 10px;
+}*/
+/*下面的大盒子,要高度自适应，可以设置高度为100%，然后顶部的盒子设置不占位置:分为左右盒子，左边的盒子*/
+.jd_category{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+}
+/*分类的盒子:分为左右盒子，左边的盒子设置左浮动，右边的盒子设置overflow:hidden，然后设置margin-left为左边盒子的宽度*/
+.jd_category .jd_cate_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    /*background-color: red;*/
+}
+.jd_category .jd_cate_left ul li{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f3f4f6;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.jd_category .jd_cate_left ul li.now{
+    border-right: none;
+
+}
+.jd_category .jd_cate_left a {
+    display: block;
+}
+.jd_category .jd_cate_left ul li.now a{
+    color: #d8505c;
+
+}
+/*右边的盒子设置为overflow:hidden,然后设置margin-left*/
+.jd_category .jd_cate_right{
+    height: 100%;
+    overflow: hidden;
+    margin-left: 90px;
+    /*background-color: red;*/
+    padding: 10px;
+}
+.jd_cate_right a{
+    width: 100%;
+}
+.jd_cate_right a img{
+    width: 100%;
+}
+.jd_cate_right ul{
+    width: 100%;
+    margin-top: 5px;
+}
+.jd_cate_right ul li{
+    width: 33.333%;
+    float: left;
+    margin-top: 10px;
+}
+.jd_cate_right ul li a{
+    display: block;
+    width: 100%;
+}
+.jd_cate_right ul li a img{
+    width: 62px;
+    height: 62px;
+    display: block;
+    margin: 0 auto;
+}
+.jd_cate_right ul li a p{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
